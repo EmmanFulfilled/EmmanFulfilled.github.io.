@@ -1,619 +1,28 @@
 <!doctype html>
 <html lang="en-IE">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Emmanuel Fulfilled</title>
-<meta name="description" content="Emmanuel Fulfilled, Computing with Machine Learning and AI student at TU Dublin. Projects, CV and contact details.">
-<meta name="author" content="Emmanuel Fulfilled">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Emmanuel Fulfilled">
-<meta property="og:description" content="Computing with Machine Learning and AI student at TU Dublin. Projects, CV and contact details.">
-<meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#14336B" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F2350" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23E3A63A'/%3E%3Ctext x='32' y='41.5' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-weight='800' font-size='26' letter-spacing='-1' fill='%23121A2B'%3EEF%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400..700&display=swap">
-<style>
-/* Layout: deep blue hero band (name + "right now" panel), then About, Projects (one wide featured card over a 2x2 grid), the CV set as a paper sheet with a date gutter, and a blue contact band that closes the page. */
-:root {
-  --bg: #F3F5FA;
-  --surface: #FFFFFF;
-  --ink: #111A2E;
-  --muted: #505E78;
-  --line: #D8DFEB;
-  --accent: #1F4FC9;
-  --accent-soft: #E2E9FA;
-  --brass: #E3A63A;
-  --brass-ink: #121A2B;
-  --brass-soft: #FAEED5;
-  --brass-strong: #79520E;
-  --hero-bg: #14336B;
-  --hero-ink: #EEF3FB;
-  --hero-muted: #AABCDD;
-  --hero-panel: #1A3F80;
-  --hero-line: rgba(238, 243, 251, 0.18);
-  --hero-hover: rgba(238, 243, 251, 0.08);
-  --shadow: 0 1px 2px rgba(17, 26, 46, 0.06), 0 14px 36px -14px rgba(17, 26, 46, 0.18);
-
-  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Figtree", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-
-  --radius: 12px;
-  --wrap: 1152px;
-  --header-h: 64px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0A0F1A;
-    --surface: #111A2B;
-    --ink: #E5EBF5;
-    --muted: #9BA8C2;
-    --line: #222D44;
-    --accent: #8AB4FF;
-    --accent-soft: #172647;
-    --brass: #ECB453;
-    --brass-ink: #111827;
-    --brass-soft: #362B13;
-    --brass-strong: #F3C878;
-    --hero-bg: #0F2350;
-    --hero-ink: #E8EEF9;
-    --hero-muted: #A3B6DA;
-    --hero-panel: #152D62;
-    --hero-line: rgba(232, 238, 249, 0.14);
-    --hero-hover: rgba(232, 238, 249, 0.07);
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 14px 36px -14px rgba(0, 0, 0, 0.55);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0A0F1A;
-  --surface: #111A2B;
-  --ink: #E5EBF5;
-  --muted: #9BA8C2;
-  --line: #222D44;
-  --accent: #8AB4FF;
-  --accent-soft: #172647;
-  --brass: #ECB453;
-  --brass-ink: #111827;
-  --brass-soft: #362B13;
-  --brass-strong: #F3C878;
-  --hero-bg: #0F2350;
-  --hero-ink: #E8EEF9;
-  --hero-muted: #A3B6DA;
-  --hero-panel: #152D62;
-  --hero-line: rgba(232, 238, 249, 0.14);
-  --hero-hover: rgba(232, 238, 249, 0.07);
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 14px 36px -14px rgba(0, 0, 0, 0.55);
-  color-scheme: dark;
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-body { margin: 0; }
-img { max-width: 100%; }
-[hidden] { display: none !important; }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0 0 auto;
-  height: env(safe-area-inset-top, 0px);
-  z-index: 30;
-  background: var(--hero-bg);
-}
-
-h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
-p, ul, dl, dd { margin: 0; }
-ul { padding: 0; }
-strong { font-weight: 700; }
-
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-.topbar :focus-visible, .hero :focus-visible, .contact :focus-visible, .site-footer :focus-visible { outline-color: var(--brass); }
-
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-}
-.skip {
-  position: absolute;
-  left: max(16px, env(safe-area-inset-left, 0px));
-  top: calc(env(safe-area-inset-top, 0px) + 8px);
-  z-index: 40;
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: var(--brass);
-  color: var(--brass-ink);
-  font-weight: 600;
-  text-decoration: none;
-  transform: translateY(-200%);
-}
-.skip:focus { transform: none; }
-
-/* Shared wrapper: carries the side gutter on every band */
-.wrap {
-  max-width: var(--wrap);
-  margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-@media (min-width: 720px) {
-  .wrap {
-    padding-left: max(32px, env(safe-area-inset-left, 0px));
-    padding-right: max(32px, env(safe-area-inset-right, 0px));
-  }
-}
-
-/* Small labels */
-.label {
-  font: 600 0.75rem/1.3 var(--font-body);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 10px 18px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  font: 600 1rem/1.2 var(--font-body);
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-}
-.btn:hover { transform: translateY(-1px); }
-.btn--brass { background: var(--brass); color: var(--brass-ink); }
-.btn--ghost { background: transparent; color: var(--hero-ink); border-color: var(--hero-line); }
-.btn--ghost:hover { background: var(--hero-hover); border-color: var(--hero-muted); }
-.btn--sm { min-height: 38px; padding: 7px 14px; font-size: 0.92rem; }
-.arr { font-size: 0.9em; opacity: 0.8; }
-
-/* Top bar */
-.topbar {
-  position: sticky;
-  top: env(safe-area-inset-top, 0px);
-  z-index: 20;
-  background: var(--hero-bg);
-  color: var(--hero-ink);
-  border-bottom: 1px solid var(--hero-line);
-}
-.topbar__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 20px;
-  min-height: var(--header-h);
-  padding-block: 10px;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-right: auto;
-  color: inherit;
-  font-weight: 650;
-  text-decoration: none;
-}
-.monogram {
-  display: inline-grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--brass);
-  color: var(--brass-ink);
-  font: 800 0.85rem/1 var(--font-display);
-  letter-spacing: -0.02em;
-  flex: none;
-}
-.nav { display: flex; flex-wrap: wrap; gap: 2px; }
-.nav a {
-  padding: 8px 10px;
-  border-radius: 6px;
-  color: var(--hero-muted);
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-.nav a:hover { color: var(--hero-ink); background: var(--hero-hover); }
-.nav a[aria-current="true"] { color: var(--hero-ink); box-shadow: inset 0 -2px 0 var(--brass); border-radius: 6px 6px 0 0; }
-@media (max-width: 719px) {
-  .topbar { position: static; }
-  .nav { order: 3; flex-basis: 100%; }
-  .nav a:first-child { padding-left: 0; }
-}
-
-/* Hero */
-.hero { background: var(--hero-bg); color: var(--hero-ink); }
-.hero__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  align-items: end;
-  gap: 40px clamp(32px, 6vw, 88px);
-  padding-block: clamp(48px, 8vw, 104px) clamp(48px, 7vw, 88px);
-}
-@media (max-width: 879px) {
-  .hero__inner { grid-template-columns: minmax(0, 1fr); }
-}
-.hero__intro { display: grid; justify-items: start; gap: 20px; min-width: 0; }
-.hero__hello { color: var(--brass); font-weight: 600; font-size: 1.1rem; }
-.hero__name {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(3.1rem, 11.5vw, 6rem);
-  line-height: 0.92;
-  letter-spacing: -0.035em;
-}
-.hero__name span { display: block; }
-.hero__lead { max-width: 38ch; font-size: clamp(1.08rem, 1.6vw, 1.25rem); line-height: 1.55; }
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px 8px 12px;
-  border: 1px solid var(--hero-line);
-  border-radius: 14px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-.status__dot {
-  flex: none;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--brass);
-  animation: pulse 2.4s ease-out infinite;
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--brass) 60%, transparent); }
-  70%, 100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--brass) 0%, transparent); }
-}
-.hero__actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px; }
-
-.now {
-  min-width: 0;
-  padding: 22px 24px 6px;
-  border: 1px solid var(--hero-line);
-  border-radius: 16px;
-  background: var(--hero-panel);
-}
-.now__title { padding-bottom: 14px; color: var(--hero-muted); }
-.now dl > div {
-  display: grid;
-  grid-template-columns: 6.25rem minmax(0, 1fr);
-  gap: 4px 12px;
-  padding-block: 13px;
-  border-top: 1px solid var(--hero-line);
-}
-.now dt {
-  padding-top: 3px;
-  color: var(--hero-muted);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.now dd { font-size: 0.98rem; line-height: 1.5; }
-.now dd strong { color: var(--brass); }
-.clock { color: var(--hero-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-@media (max-width: 420px) {
-  .now { padding-inline: 18px; }
-  .now dl > div { grid-template-columns: minmax(0, 1fr); }
-}
-
-/* Sections */
-.section { padding-block: clamp(64px, 9vw, 112px); scroll-margin-top: calc(var(--header-h) + 16px); }
-.section + .section { padding-top: 0; }
-.section__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 12px 32px;
-  padding-bottom: clamp(24px, 3.5vw, 40px);
-}
-.section__title { display: grid; gap: 10px; min-width: 0; }
-h2 {
-  font-family: var(--font-display);
-  font-weight: 750;
-  font-size: clamp(2rem, 3.6vw, 2.75rem);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-}
-.section__intro { max-width: 58ch; color: var(--muted); }
-.section__note { color: var(--muted); font-size: 0.92rem; }
-.more { font-weight: 600; text-decoration: none; }
-.more:hover { text-decoration: underline; }
-@media (max-width: 719px) {
-  .section, .contact { scroll-margin-top: 12px; }
-}
-
-/* About */
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 20px clamp(32px, 6vw, 88px);
-}
-@media (max-width: 799px) {
-  .about { grid-template-columns: minmax(0, 1fr); }
-}
-.about__body { display: grid; gap: 18px; max-width: 62ch; font-size: 1.125rem; }
-.about__aside { color: var(--muted); }
-
-/* Projects */
-.projects { display: grid; gap: 20px; }
-.project {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-width: 0;
-  padding: clamp(20px, 2.6vw, 28px);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-}
-.project h3 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 10px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.35rem;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
-.project__meta {
-  display: flex;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 0.875rem;
-  font-variant-numeric: tabular-nums;
-}
-.project__meta span + span::before { content: "·"; padding-inline: 8px; }
-.project__sub { margin-top: -6px; color: var(--muted); }
-.points { display: grid; gap: 8px; padding-left: 1.15em; font-size: 1rem; }
-.points li { padding-left: 2px; }
-.points li::marker { color: var(--accent); }
-.project__foot { display: grid; gap: 14px; margin-top: auto; padding-top: 6px; }
-.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-@media (max-width: 759px) {
-  .project-grid { grid-template-columns: minmax(0, 1fr); }
-}
-.project--featured {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: 28px clamp(28px, 5vw, 64px);
-  padding: clamp(22px, 3.4vw, 40px);
-}
-@media (max-width: 879px) {
-  .project--featured { grid-template-columns: minmax(0, 1fr); }
-}
-.project__col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
-.project--featured h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
-.project--featured .project__foot { margin-top: 0; }
-.figure {
-  display: grid;
-  gap: 4px;
-  margin-top: auto;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-.figure__num {
-  color: var(--accent);
-  font: 800 clamp(2.4rem, 5vw, 3.4rem)/1 var(--font-display);
-  letter-spacing: -0.03em;
-  font-variant-numeric: tabular-nums;
-}
-.figure__cap { max-width: 36ch; color: var(--muted); font-size: 0.95rem; }
-
-/* Chips, tags and pills */
-.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
-.chips li {
-  padding: 5px 9px;
-  border-radius: 6px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font: 500 0.8rem/1.25 var(--font-mono);
-}
-.chips--plain li {
-  padding: 5px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
-  font: 500 0.875rem/1.3 var(--font-body);
-}
-.tag {
-  padding: 4px 7px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  color: var(--muted);
-  font: 600 0.68rem/1 var(--font-body);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.pill {
-  padding: 5px 9px;
-  border-radius: 999px;
-  background: var(--brass-soft);
-  color: var(--brass-strong);
-  font: 700 0.68rem/1 var(--font-body);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-/* CV sheet */
-.sheet {
-  display: grid;
-  gap: clamp(44px, 5vw, 60px);
-  padding: clamp(22px, 4.5vw, 56px);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-.cv-block { display: grid; gap: 22px; min-width: 0; }
-.cv-block__title {
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--ink);
-  font: 700 1.3rem/1.2 var(--font-display);
-  letter-spacing: -0.01em;
-}
-.entries { display: grid; gap: 28px; }
-.entry { display: grid; grid-template-columns: 9.75rem minmax(0, 1fr); gap: 4px 28px; }
-@media (max-width: 639px) {
-  .entry { grid-template-columns: minmax(0, 1fr); }
-}
-.entry__when {
-  padding-top: 2px;
-  color: var(--muted);
-  font-size: 0.92rem;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-.entry__what { display: grid; gap: 6px; min-width: 0; }
-.entry h4 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 10px;
-  font: 650 1.0625rem/1.35 var(--font-body);
-}
-.entry__org { color: var(--muted); }
-.entry p { max-width: 68ch; }
-.entry .label { padding-top: 8px; }
-
-.skills { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 36px clamp(28px, 5vw, 64px); }
-@media (max-width: 799px) {
-  .skills { grid-template-columns: minmax(0, 1fr); }
-}
-.skills__group { display: grid; align-content: start; gap: 16px; min-width: 0; }
-.skill-rows { display: grid; gap: 14px; }
-.skill-rows > div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); align-items: baseline; gap: 6px 16px; }
-@media (max-width: 479px) {
-  .skill-rows > div { grid-template-columns: minmax(0, 1fr); }
-}
-.skill-rows dt { font-weight: 600; font-size: 0.95rem; }
-.core { display: grid; gap: 14px; list-style: none; }
-.core li { display: grid; gap: 2px; }
-.core strong { font-weight: 650; }
-.core span { color: var(--muted); font-size: 0.97rem; }
-
-.certs {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px 32px;
-  list-style: none;
-}
-@media (max-width: 899px) {
-  .certs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 559px) {
-  .certs { grid-template-columns: minmax(0, 1fr); }
-}
-.cert { display: grid; align-content: start; gap: 6px; min-width: 0; }
-.cert__by { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
-.cert__title { font-weight: 650; line-height: 1.35; }
-.cert__title a { color: var(--ink); text-decoration-color: var(--line); }
-.cert__title a:hover { color: var(--accent); text-decoration-color: currentColor; }
-.cert p:last-child { color: var(--muted); font-size: 0.95rem; }
-
-/* Contact band and footer */
-.contact { background: var(--hero-bg); color: var(--hero-ink); scroll-margin-top: var(--header-h); }
-.contact__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  align-items: start;
-  gap: 32px clamp(32px, 6vw, 88px);
-  padding-block: clamp(64px, 9vw, 112px) clamp(48px, 6vw, 72px);
-}
-@media (max-width: 859px) {
-  .contact__inner { grid-template-columns: minmax(0, 1fr); }
-}
-.contact__text { display: grid; gap: 18px; }
-.contact h2 { font-size: clamp(2.3rem, 5vw, 3.5rem); }
-.contact__text p { max-width: 46ch; font-size: 1.125rem; }
-.contact__list { display: grid; list-style: none; }
-.contact__list li {
-  display: grid;
-  grid-template-columns: 6rem minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 8px 16px;
-  padding-block: 16px;
-  border-top: 1px solid var(--hero-line);
-}
-.contact__list li:last-child { border-bottom: 1px solid var(--hero-line); }
-.contact__list .label { color: var(--hero-muted); }
-.contact__list .v {
-  min-width: 0;
-  color: var(--hero-ink);
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-.contact__list .v:hover { text-decoration: underline; text-decoration-color: var(--brass); }
-.contact__list .v--wide { grid-column: span 2; }
-@media (max-width: 479px) {
-  .contact__list li { grid-template-columns: minmax(0, 1fr) auto; }
-  .contact__list .label { grid-column: 1 / -1; }
-  .contact__list .v--wide { grid-column: 1 / -1; }
-}
-.site-footer { background: var(--hero-bg); color: var(--hero-muted); font-size: 0.9rem; }
-.site-footer .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 8px 24px;
-  padding-block: 0 36px;
-}
-.site-footer a { color: var(--hero-ink); text-decoration: none; }
-.site-footer a:hover { text-decoration: underline; text-decoration-color: var(--brass); }
-
-@media (prefers-reduced-motion: reduce) {
-  .status__dot { animation: none; }
-  .btn { transition: none; }
-  .btn:hover { transform: none; }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Emmanuel Fulfilled</title>
+  <meta name="description" content="Emmanuel Fulfilled, Computing with Machine Learning and AI student at TU Dublin. Projects, CV and contact details.">
+  <meta name="author" content="Emmanuel Fulfilled">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Emmanuel Fulfilled">
+  <meta property="og:description" content="Computing with Machine Learning and AI student at TU Dublin. Projects, CV and contact details.">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#14336B" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F2350" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23E3A63A'/%3E%3Ctext x='32' y='41.5' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-weight='800' font-size='26' letter-spacing='-1' fill='%23121A2B'%3EEF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip" href="#about">Skip to content</a>
 
-<a class="skip" href="#about">Skip to content</a>
-
-<header class="topbar">
-  <div class="wrap topbar__inner">
+  <header class="topbar band">
     <a class="brand" href="#top">
       <span class="monogram" aria-hidden="true">EF</span>
       <span>Emmanuel Fulfilled</span>
@@ -625,12 +34,11 @@ h2 {
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn--ghost btn--sm" href="https://github.com/EmmanFulfilled" target="_blank" rel="noopener">GitHub&nbsp;<span class="arr" aria-hidden="true">↗</span></a>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="hero" id="top" aria-labelledby="name">
-    <div class="wrap hero__inner">
+  <main>
+    <!-- Hero -->
+    <section class="hero band" id="top" aria-labelledby="name">
       <div class="hero__intro">
         <p class="hero__hello">Hi, I’m Manny.</p>
         <h1 class="hero__name" id="name"><span>Emmanuel</span> <span>Fulfilled</span></h1>
@@ -646,18 +54,22 @@ h2 {
       <aside class="now" aria-label="What I’m up to right now">
         <p class="label now__title">Right now</p>
         <dl>
-          <div><dt>Studying</dt><dd>BSc (Hons) Computing with Machine Learning and AI, third year, TU Dublin</dd></div>
-          <div><dt>Grades</dt><dd><strong>3.73 / 4.0 GPA</strong>, First Class Honours</dd></div>
-          <div><dt>Building</dt><dd>A URL shortener with FastAPI, PostgreSQL and Redis</dd></div>
-          <div><dt>Working</dt><dd>Customer Assistant at Vue Cinemas and Student Ambassador at TU Dublin</dd></div>
-          <div><dt>Based in</dt><dd>Dublin, Ireland<span class="clock" data-clock></span></dd></div>
+          <dt>Studying</dt>
+          <dd>BSc (Hons) Computing with Machine Learning and AI, third year, TU Dublin</dd>
+          <dt>Grades</dt>
+          <dd><strong>3.73 / 4.0 GPA</strong>, First Class Honours</dd>
+          <dt>Building</dt>
+          <dd>A URL shortener with FastAPI, PostgreSQL and Redis</dd>
+          <dt>Working</dt>
+          <dd>Customer Assistant at Vue Cinemas and Student Ambassador at TU Dublin</dd>
+          <dt>Based in</dt>
+          <dd>Dublin, Ireland<span class="clock" data-clock></span></dd>
         </dl>
       </aside>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="about" aria-labelledby="about-h">
-    <div class="wrap about">
+    <!-- About -->
+    <section class="section about band" id="about" aria-labelledby="about-h">
       <h2 id="about-h">About me</h2>
       <div class="about__body">
         <p>I’m in third year at TU Dublin studying Computing with Machine Learning and Artificial Intelligence, and I’m currently on a 3.73/4.0 GPA (First Class Honours).</p>
@@ -666,240 +78,230 @@ h2 {
         <p>I’m looking for a software engineering internship where I can work on real projects and keep learning from experienced engineers.</p>
         <p class="about__aside">Away from all that, I’m into football, boxing and gaming.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="projects" aria-labelledby="projects-h">
-    <div class="wrap">
-      <div class="section__head">
-        <div class="section__title">
+    <!-- Projects -->
+    <section class="section projects band" id="projects" aria-labelledby="projects-h">
+      <header class="section__head">
+        <hgroup>
           <h2 id="projects-h">Projects</h2>
-          <p class="section__intro">A few things I’ve built, from group projects at TU Dublin to personal ones I’ve done in my own time.</p>
-        </div>
+          <p>A few things I’ve built, from group projects at TU Dublin to personal ones I’ve done in my own time.</p>
+        </hgroup>
         <a class="more" href="https://github.com/EmmanFulfilled" target="_blank" rel="noopener">More on my GitHub&nbsp;<span aria-hidden="true">↗</span></a>
-      </div>
+      </header>
 
-      <div class="projects">
-        <article class="project project--featured" aria-labelledby="p-health">
-          <div class="project__col">
-            <p class="project__meta"><span>Oct 2026</span><span>Group of 4</span></p>
-            <h3 id="p-health">Healthcare Innovation Challenge</h3>
-            <p class="project__sub">Transforming Health 2026 · TU Dublin and Tallaght University Hospital</p>
-            <p>Our team designed a prototype equipment tracking system for the hospital’s Occupational Therapy department. It replaces a manual Excel process that was causing lost equipment and slow stock checks.</p>
-            <div class="figure">
-              <span class="figure__num">€4,600</span>
-              <span class="figure__cap">roughly what the department was losing in equipment every year</span>
-            </div>
-          </div>
-          <div class="project__col">
-            <p class="label">What I did</p>
-            <ul class="points">
-              <li>Led design and strategy, turning the clinician’s problem into user flows (collect, return, transfer, repair, mark missing) with a PIN-based staff sign-in that suits a busy ward</li>
-              <li>Built the prototype using AI-assisted development</li>
-              <li>Pitched it to a panel from Amazon and Tallaght University Hospital, who praised the interface as clear and easy to use for non-technical clinical staff</li>
+      <article class="project project--featured" aria-labelledby="p-health">
+        <header class="project__col">
+          <p class="project__meta"><time datetime="2026-10">Oct 2026</time><span>Group of 4</span></p>
+          <h3 id="p-health">Healthcare Innovation Challenge</h3>
+          <p class="project__sub">Transforming Health 2026 · TU Dublin and Tallaght University Hospital</p>
+          <p>Our team designed a prototype equipment tracking system for the hospital’s Occupational Therapy department. It replaces a manual Excel process that was causing lost equipment and slow stock checks.</p>
+          <p class="stat"><strong>€4,600</strong><span>roughly what the department was losing in equipment every year</span></p>
+        </header>
+        <section class="project__col" aria-labelledby="p-health-did">
+          <h4 class="label" id="p-health-did">What I did</h4>
+          <ul class="points">
+            <li>Led design and strategy, turning the clinician’s problem into user flows (collect, return, transfer, repair, mark missing) with a PIN-based staff sign-in that suits a busy ward</li>
+            <li>Built the prototype using AI-assisted development</li>
+            <li>Pitched it to a panel from Amazon and Tallaght University Hospital, who praised the interface as clear and easy to use for non-technical clinical staff</li>
+          </ul>
+          <footer class="project__foot">
+            <ul class="chips chips--plain" aria-label="Skills used">
+              <li>User flows</li>
+              <li>Prototyping</li>
+              <li>AI-assisted development</li>
+              <li>Pitching</li>
             </ul>
-            <div class="project__foot">
-              <ul class="chips chips--plain" aria-label="Skills used">
-                <li>User flows</li>
-                <li>Prototyping</li>
-                <li>AI-assisted development</li>
-                <li>Pitching</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+          </footer>
+        </section>
+      </article>
 
-        <div class="project-grid">
-          <article class="project" aria-labelledby="p-url">
-            <p class="project__meta"><span>Sep 2026 – Present</span><span>Personal project</span></p>
-            <h3 id="p-url">URL Shortener <span class="pill">In progress</span></h3>
-            <p>A full backend service for short links, with custom aliases and click analytics.</p>
-            <ul class="points">
-              <li>JWT authentication with refresh token rotation</li>
-              <li>Redis for caching and rate limiting, PostgreSQL for storage</li>
-              <li>Async click analytics, visualised in a vanilla JS frontend with Chart.js</li>
-            </ul>
-            <div class="project__foot">
-              <ul class="chips" aria-label="Built with">
-                <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>JavaScript</li><li>Chart.js</li>
-              </ul>
-            </div>
-          </article>
+      <article class="project" aria-labelledby="p-url">
+        <p class="project__meta"><span><time datetime="2026-09">Sep 2026</time> – Present</span><span>Personal project</span></p>
+        <h3 id="p-url">URL Shortener <span class="pill">In progress</span></h3>
+        <p>A full backend service for short links, with custom aliases and click analytics.</p>
+        <ul class="points">
+          <li>JWT authentication with refresh token rotation</li>
+          <li>Redis for caching and rate limiting, PostgreSQL for storage</li>
+          <li>Async click analytics, visualised in a vanilla JS frontend with Chart.js</li>
+        </ul>
+        <footer class="project__foot">
+          <ul class="chips" aria-label="Built with">
+            <li>Python</li>
+            <li>FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>Redis</li>
+            <li>JavaScript</li>
+            <li>Chart.js</li>
+          </ul>
+        </footer>
+      </article>
 
-          <article class="project" aria-labelledby="p-heart">
-            <p class="project__meta"><span>Feb – May 2026</span><span>Group project, TU Dublin</span></p>
-            <h3 id="p-heart">Heart Disease Prediction System</h3>
-            <p>A clinical machine learning system comparing XGBoost, Random Forest and Logistic Regression on a combined dataset of 918 patient records.</p>
-            <ul class="points">
-              <li>Handled the full pipeline: data cleaning, preprocessing, training, evaluation and deployment through a Flask web app</li>
-              <li>Random Forest performed best, at 85.3% accuracy</li>
-              <li>Presented the live demo and results to faculty and peers</li>
-            </ul>
-            <div class="project__foot">
-              <ul class="chips" aria-label="Built with">
-                <li>Python</li><li>scikit-learn</li><li>XGBoost</li><li>Flask</li>
-              </ul>
-              <a class="more" href="https://github.com/Illiason/heart_disease_predictor" target="_blank" rel="noopener">View the code on GitHub&nbsp;<span aria-hidden="true">↗</span></a>
-            </div>
-          </article>
+      <article class="project" aria-labelledby="p-heart">
+        <p class="project__meta"><span><time datetime="2026-02">Feb</time> – <time datetime="2026-05">May 2026</time></span><span>Group project, TU Dublin</span></p>
+        <h3 id="p-heart">Heart Disease Prediction System</h3>
+        <p>A clinical machine learning system comparing XGBoost, Random Forest and Logistic Regression on a combined dataset of 918 patient records.</p>
+        <ul class="points">
+          <li>Handled the full pipeline: data cleaning, preprocessing, training, evaluation and deployment through a Flask web app</li>
+          <li>Random Forest performed best, at 85.3% accuracy</li>
+          <li>Presented the live demo and results to faculty and peers</li>
+        </ul>
+        <footer class="project__foot">
+          <ul class="chips" aria-label="Built with">
+            <li>Python</li>
+            <li>scikit-learn</li>
+            <li>XGBoost</li>
+            <li>Flask</li>
+          </ul>
+          <a class="more" href="https://github.com/Illiason/heart_disease_predictor" target="_blank" rel="noopener">View the code on GitHub&nbsp;<span aria-hidden="true">↗</span></a>
+        </footer>
+      </article>
 
-          <article class="project" aria-labelledby="p-ins">
-            <p class="project__meta"><span>Nov – Dec 2025</span><span>Group project, TU Dublin</span></p>
-            <h3 id="p-ins">Insurance Cost Prediction</h3>
-            <p>A machine learning model that predicts medical insurance charges, built with scikit-learn.</p>
-            <ul class="points">
-              <li>EDA, preprocessing, feature engineering and model comparison</li>
-              <li>Evaluated with MAE and RMSE, then deployed the trained model through a Tkinter GUI</li>
-              <li>Focused on explainability and the ethics of AI in healthcare</li>
-            </ul>
-            <div class="project__foot">
-              <ul class="chips" aria-label="Built with">
-                <li>Python</li><li>scikit-learn</li><li>Tkinter</li>
-              </ul>
-            </div>
-          </article>
+      <article class="project" aria-labelledby="p-ins">
+        <p class="project__meta"><span><time datetime="2025-11">Nov</time> – <time datetime="2025-12">Dec 2025</time></span><span>Group project, TU Dublin</span></p>
+        <h3 id="p-ins">Insurance Cost Prediction</h3>
+        <p>A machine learning model that predicts medical insurance charges, built with scikit-learn.</p>
+        <ul class="points">
+          <li>EDA, preprocessing, feature engineering and model comparison</li>
+          <li>Evaluated with MAE and RMSE, then deployed the trained model through a Tkinter GUI</li>
+          <li>Focused on explainability and the ethics of AI in healthcare</li>
+        </ul>
+        <footer class="project__foot">
+          <ul class="chips" aria-label="Built with">
+            <li>Python</li>
+            <li>scikit-learn</li>
+            <li>Tkinter</li>
+          </ul>
+        </footer>
+      </article>
 
-          <article class="project" aria-labelledby="p-java">
-            <p class="project__meta"><span>Jul 2025</span><span>Personal project</span></p>
-            <h3 id="p-java">Inventory and Sales Management System</h3>
-            <p>A console-based retail management system in Java that simulates a point-of-sale app.</p>
-            <ul class="points">
-              <li>Product and inventory management, a shopping cart and sales reporting</li>
-              <li>Object-oriented design with inheritance</li>
-              <li>Java serialisation for persistent storage</li>
-            </ul>
-            <div class="project__foot">
-              <ul class="chips" aria-label="Built with">
-                <li>Java</li><li>OOP</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+      <article class="project" aria-labelledby="p-java">
+        <p class="project__meta"><time datetime="2025-07">Jul 2025</time><span>Personal project</span></p>
+        <h3 id="p-java">Inventory and Sales Management System</h3>
+        <p>A console-based retail management system in Java that simulates a point-of-sale app.</p>
+        <ul class="points">
+          <li>Product and inventory management, a shopping cart and sales reporting</li>
+          <li>Object-oriented design with inheritance</li>
+          <li>Java serialisation for persistent storage</li>
+        </ul>
+        <footer class="project__foot">
+          <ul class="chips" aria-label="Built with">
+            <li>Java</li>
+            <li>OOP</li>
+          </ul>
+        </footer>
+      </article>
+    </section>
 
-  <section class="section" id="cv" aria-labelledby="cv-h">
-    <div class="wrap">
-      <div class="section__head">
-        <div class="section__title">
-          <h2 id="cv-h">CV</h2>
-        </div>
-        <p class="section__note">Last updated October 2026</p>
-      </div>
+    <!-- CV -->
+    <section class="section band" id="cv" aria-labelledby="cv-h">
+      <header class="section__head">
+        <h2 id="cv-h">CV</h2>
+        <p class="section__note">Last updated <time datetime="2026-10">October 2026</time></p>
+      </header>
 
-      <div class="sheet">
+      <article class="sheet">
         <section class="cv-block" aria-labelledby="cv-edu">
           <h3 class="cv-block__title" id="cv-edu">Education</h3>
-          <div class="entries">
-            <div class="entry">
-              <p class="entry__when">Sep 2024 – Present</p>
-              <div class="entry__what">
-                <h4>BSc (Hons) Computing with Machine Learning and Artificial Intelligence <span class="tag">NFQ Level 8</span></h4>
-                <p class="entry__org">Technological University Dublin</p>
-                <p>Current GPA <strong>3.73 / 4.0</strong> (First Class Honours)</p>
-                <p class="label">Relevant modules</p>
-                <ul class="chips chips--plain">
-                  <li>DevOps</li>
-                  <li>Artificial Intelligence</li>
-                  <li>Databases</li>
-                  <li>Cloud Computing</li>
-                  <li>Object Oriented Software Development</li>
-                  <li>Cyber Security</li>
-                  <li>Private Virtualised Environments</li>
-                  <li>Discrete Mathematics</li>
-                  <li>IT Systems Management</li>
-                </ul>
-              </div>
-            </div>
-            <div class="entry">
-              <p class="entry__when">Sep 2023 – May 2024</p>
-              <div class="entry__what">
-                <h4>Computer Science <span class="tag">QQI Level 5</span></h4>
-                <p class="entry__org">Blackrock Further Education Institute</p>
-                <p>5 Distinctions and 2 Merits</p>
-              </div>
-            </div>
-            <div class="entry">
-              <p class="entry__when">Sep 2021 – Jun 2023</p>
-              <div class="entry__what">
-                <h4>Leaving Certificate</h4>
-                <p class="entry__org">Griffeen Community College</p>
-              </div>
-            </div>
-          </div>
+          <ol class="entries">
+            <li class="entry">
+              <p class="entry__when"><time datetime="2024-09">Sep 2024</time> – Present</p>
+              <h4>BSc (Hons) Computing with Machine Learning and Artificial Intelligence <span class="tag">NFQ Level 8</span></h4>
+              <p class="entry__org">Technological University Dublin</p>
+              <p>Current GPA <strong>3.73 / 4.0</strong> (First Class Honours)</p>
+              <p class="label">Relevant modules</p>
+              <ul class="chips chips--plain">
+                <li>DevOps</li>
+                <li>Artificial Intelligence</li>
+                <li>Databases</li>
+                <li>Cloud Computing</li>
+                <li>Object Oriented Software Development</li>
+                <li>Cyber Security</li>
+                <li>Private Virtualised Environments</li>
+                <li>Discrete Mathematics</li>
+                <li>IT Systems Management</li>
+              </ul>
+            </li>
+            <li class="entry">
+              <p class="entry__when"><time datetime="2023-09">Sep 2023</time> – <time datetime="2024-05">May 2024</time></p>
+              <h4>Computer Science <span class="tag">QQI Level 5</span></h4>
+              <p class="entry__org">Blackrock Further Education Institute</p>
+              <p>5 Distinctions and 2 Merits</p>
+            </li>
+            <li class="entry">
+              <p class="entry__when"><time datetime="2021-09">Sep 2021</time> – <time datetime="2023-06">Jun 2023</time></p>
+              <h4>Leaving Certificate</h4>
+              <p class="entry__org">Griffeen Community College</p>
+            </li>
+          </ol>
         </section>
 
         <section class="cv-block" aria-labelledby="cv-work">
           <h3 class="cv-block__title" id="cv-work">Experience</h3>
-          <div class="entries">
-            <div class="entry">
-              <p class="entry__when">Aug 2026 – Present</p>
-              <div class="entry__what">
-                <h4>Student Ambassador</h4>
-                <p class="entry__org">Technological University Dublin</p>
-                <p>I represent the university at open days and orientation events, showing prospective students around campus and answering their questions about courses and student life.</p>
-              </div>
-            </div>
-            <div class="entry">
-              <p class="entry__when">Jul 2024 – Present</p>
-              <div class="entry__what">
-                <h4>Customer Assistant</h4>
-                <p class="entry__org">Vue Cinemas</p>
-                <p>Customer-facing work in a busy cinema, alongside full-time study. It’s built up my teamwork, my communication and my ability to keep going under pressure.</p>
-              </div>
-            </div>
-          </div>
+          <ol class="entries">
+            <li class="entry">
+              <p class="entry__when"><time datetime="2026-08">Aug 2026</time> – Present</p>
+              <h4>Student Ambassador</h4>
+              <p class="entry__org">Technological University Dublin</p>
+              <p>I represent the university at open days and orientation events, showing prospective students around campus and answering their questions about courses and student life.</p>
+            </li>
+            <li class="entry">
+              <p class="entry__when"><time datetime="2024-07">Jul 2024</time> – Present</p>
+              <h4>Customer Assistant</h4>
+              <p class="entry__org">Vue Cinemas</p>
+              <p>Customer-facing work in a busy cinema, alongside full-time study. It’s built up my teamwork, my communication and my ability to keep going under pressure.</p>
+            </li>
+          </ol>
         </section>
 
         <section class="cv-block" aria-labelledby="cv-vol">
           <h3 class="cv-block__title" id="cv-vol">Volunteering</h3>
-          <div class="entries">
-            <div class="entry">
-              <p class="entry__when">Oct 2025 – Present</p>
-              <div class="entry__what">
-                <h4>Class Representative</h4>
-                <p class="entry__org">Technological University Dublin</p>
-                <p>I’m the main link between my class and the lecturers. I gather feedback from classmates, bring concerns to staff and help coordinate class activities.</p>
-              </div>
-            </div>
-            <div class="entry">
-              <p class="entry__when">Aug 2025 – Present</p>
-              <div class="entry__what">
-                <h4>Peer Mentor</h4>
-                <p class="entry__org">Technological University Dublin</p>
-                <p>I help first-year students settle into academic and social life at university, with advice on study strategies and time management.</p>
-              </div>
-            </div>
-          </div>
+          <ol class="entries">
+            <li class="entry">
+              <p class="entry__when"><time datetime="2025-10">Oct 2025</time> – Present</p>
+              <h4>Class Representative</h4>
+              <p class="entry__org">Technological University Dublin</p>
+              <p>I’m the main link between my class and the lecturers. I gather feedback from classmates, bring concerns to staff and help coordinate class activities.</p>
+            </li>
+            <li class="entry">
+              <p class="entry__when"><time datetime="2025-08">Aug 2025</time> – Present</p>
+              <h4>Peer Mentor</h4>
+              <p class="entry__org">Technological University Dublin</p>
+              <p>I help first-year students settle into academic and social life at university, with advice on study strategies and time management.</p>
+            </li>
+          </ol>
         </section>
 
-        <section class="cv-block" aria-labelledby="cv-skills">
+        <section class="cv-block cv-block--skills" aria-labelledby="cv-skills">
           <h3 class="cv-block__title" id="cv-skills">Skills</h3>
-          <div class="skills">
-            <div class="skills__group">
-              <p class="label">Technical</p>
-              <dl class="skill-rows">
-                <div><dt>Languages</dt><dd><ul class="chips"><li>Python</li><li>Java</li><li>SQL</li></ul></dd></div>
-                <div><dt>Web and APIs</dt><dd><ul class="chips"><li>FastAPI</li><li>Flask</li><li>HTML</li><li>CSS</li></ul></dd></div>
-                <div><dt>Data and ML</dt><dd><ul class="chips"><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Excel (VLOOKUP, pivot tables)</li></ul></dd></div>
-                <div><dt>Databases</dt><dd><ul class="chips"><li>PostgreSQL</li><li>Redis</li></ul></dd></div>
-                <div><dt>Tools</dt><dd><ul class="chips"><li>Git</li><li>Chart.js</li><li>Linux shell scripting (awk, sed)</li></ul></dd></div>
-                <div><dt>Cloud</dt><dd><ul class="chips"><li>AWS (Cloud Foundations certified)</li></ul></dd></div>
-              </dl>
-            </div>
-            <div class="skills__group">
-              <p class="label">Core skills</p>
-              <ul class="core">
-                <li><strong>Leadership</strong><span>I’m a Class Rep and Peer Mentor, and I led design and strategy for my team at the Healthcare Innovation Challenge.</span></li>
-                <li><strong>Communication</strong><span>I pitched to a panel from Amazon and Tallaght University Hospital, and I talk prospective students through TU Dublin as a Student Ambassador.</span></li>
-                <li><strong>Time management</strong><span>I’ve worked part-time at Vue Cinemas since 2024 alongside full-time study, while keeping a First Class Honours GPA.</span></li>
-                <li><strong>Initiative</strong><span>I build projects outside my course, like the URL shortener and a Java point-of-sale system.</span></li>
-                <li><strong>Attention to detail</strong><span>I care about writing high-quality code and documenting it properly.</span></li>
-                <li><strong>Cultural awareness</strong><span>I work well in multicultural, diverse teams.</span></li>
-              </ul>
-            </div>
-          </div>
+          <section class="skills__group" aria-labelledby="skills-tech">
+            <h4 class="label" id="skills-tech">Technical</h4>
+            <dl class="skill-rows">
+              <dt>Languages</dt>
+              <dd><ul class="chips"><li>Python</li><li>Java</li><li>SQL</li></ul></dd>
+              <dt>Web and APIs</dt>
+              <dd><ul class="chips"><li>FastAPI</li><li>Flask</li><li>HTML</li><li>CSS</li></ul></dd>
+              <dt>Data and ML</dt>
+              <dd><ul class="chips"><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>Excel (VLOOKUP, pivot tables)</li></ul></dd>
+              <dt>Databases</dt>
+              <dd><ul class="chips"><li>PostgreSQL</li><li>Redis</li></ul></dd>
+              <dt>Tools</dt>
+              <dd><ul class="chips"><li>Git</li><li>Chart.js</li><li>Linux shell scripting (awk, sed)</li></ul></dd>
+              <dt>Cloud</dt>
+              <dd><ul class="chips"><li>AWS (Cloud Foundations certified)</li></ul></dd>
+            </dl>
+          </section>
+          <section class="skills__group" aria-labelledby="skills-core">
+            <h4 class="label" id="skills-core">Core skills</h4>
+            <ul class="core">
+              <li><strong>Leadership</strong><span>I’m a Class Rep and Peer Mentor, and I led design and strategy for my team at the Healthcare Innovation Challenge.</span></li>
+              <li><strong>Communication</strong><span>I pitched to a panel from Amazon and Tallaght University Hospital, and I talk prospective students through TU Dublin as a Student Ambassador.</span></li>
+              <li><strong>Time management</strong><span>I’ve worked part-time at Vue Cinemas since 2024 alongside full-time study, while keeping a First Class Honours GPA.</span></li>
+              <li><strong>Initiative</strong><span>I build projects outside my course, like the URL shortener and a Java point-of-sale system.</span></li>
+              <li><strong>Attention to detail</strong><span>I care about writing high-quality code and documenting it properly.</span></li>
+              <li><strong>Cultural awareness</strong><span>I work well in multicultural, diverse teams.</span></li>
+            </ul>
+          </section>
         </section>
 
         <section class="cv-block" aria-labelledby="cv-certs">
@@ -942,16 +344,15 @@ h2 {
           <h3 class="cv-block__title" id="cv-refs">References</h3>
           <p>Available on request.</p>
         </section>
-      </div>
-    </div>
-  </section>
+      </article>
+    </section>
 
-  <section class="contact" id="contact" aria-labelledby="contact-h">
-    <div class="wrap contact__inner">
-      <div class="contact__text">
+    <!-- Contact -->
+    <section class="contact band" id="contact" aria-labelledby="contact-h">
+      <header class="contact__text">
         <h2 id="contact-h">Get in touch</h2>
         <p>I’m looking for a software engineering internship from January 2027. If you’ve a role going, or you just want to chat about one of my projects, send me an email or a message on LinkedIn.</p>
-      </div>
+      </header>
       <ul class="contact__list">
         <li>
           <span class="label">Email</span>
@@ -968,119 +369,12 @@ h2 {
         </li>
       </ul>
       <p class="sr-only" id="copy-status" aria-live="polite"></p>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer class="site-footer">
-  <div class="wrap">
+  <footer class="site-footer band">
     <p>© 2026 Emmanuel Fulfilled · Dublin, Ireland</p>
     <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
-  </div>
-</footer>
-
-<script>
-(function () {
-  var reduceMotion = false;
-  try { reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
-
-  // Local time in Dublin, shown in the "Right now" panel
-  var clockEls = document.querySelectorAll("[data-clock]");
-  var fmt = null;
-  try {
-    fmt = new Intl.DateTimeFormat("en-IE", { hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: "Europe/Dublin" });
-  } catch (e) {}
-  function tick() {
-    if (!fmt) return;
-    var t = fmt.format(new Date());
-    clockEls.forEach(function (el) { el.textContent = " · " + t + " local time"; });
-  }
-  tick();
-  setInterval(tick, 20000);
-
-  // Smooth scrolling for in-page links
-  document.addEventListener("click", function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if (!a) return;
-    var id = a.getAttribute("href").slice(1);
-    var behavior = reduceMotion ? "auto" : "smooth";
-    if (id === "top") {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: behavior });
-      try { history.pushState(null, "", location.pathname + location.search); } catch (err) {}
-      return;
-    }
-    var target = id ? document.getElementById(id) : null;
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: behavior, block: "start" });
-    if (!a.classList.contains("skip")) {
-      try { history.pushState(null, "", "#" + id); } catch (err) {}
-    }
-    if (a.classList.contains("skip")) {
-      target.setAttribute("tabindex", "-1");
-      try { target.focus({ preventScroll: true }); } catch (err) {}
-    }
-  });
-
-  // Highlight the section you're reading in the top bar
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
-  if ("IntersectionObserver" in window && navLinks.length) {
-    var byId = {};
-    navLinks.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach(function (a) { a.removeAttribute("aria-current"); });
-        var link = byId[entry.target.id];
-        if (link) link.setAttribute("aria-current", "true");
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    ["top", "about", "projects", "cv", "contact"].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) io.observe(el);
-    });
-  }
-
-  // Copy email address
-  var copyBtn = document.getElementById("copy-email");
-  var emailEl = document.getElementById("email");
-  var statusEl = document.getElementById("copy-status");
-  var resetTimer = null;
-  function flash(label, message) {
-    copyBtn.textContent = label;
-    statusEl.textContent = message;
-    clearTimeout(resetTimer);
-    resetTimer = setTimeout(function () { copyBtn.textContent = "Copy"; statusEl.textContent = ""; }, 2200);
-  }
-  function selectEmail() {
-    try {
-      var range = document.createRange();
-      range.selectNodeContents(emailEl);
-      var sel = window.getSelection();
-      sel.removeAllRanges();
-      sel.addRange(range);
-    } catch (e) {}
-    flash("Selected", "Email address selected, ready to copy");
-  }
-  if (copyBtn && emailEl) {
-    copyBtn.addEventListener("click", function () {
-      var address = emailEl.textContent.trim();
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(address).then(function () {
-            flash("Copied", "Email address copied");
-          }, selectEmail);
-        } else {
-          selectEmail();
-        }
-      } catch (e) {
-        selectEmail();
-      }
-    });
-  }
-})();
-</script>
-
+  </footer>
 </body>
 </html>
