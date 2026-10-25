@@ -10,33 +10,33 @@
 <meta property="og:title" content="Emmanuel Fulfilled">
 <meta property="og:description" content="Computing with Machine Learning and AI student at TU Dublin. Projects, CV and contact details.">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0F3B31" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0D2A22" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23E3A63A'/%3E%3Ctext x='32' y='41.5' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-weight='800' font-size='26' letter-spacing='-1' fill='%231A2721'%3EEF%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#14336B" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F2350" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23E3A63A'/%3E%3Ctext x='32' y='41.5' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-weight='800' font-size='26' letter-spacing='-1' fill='%23121A2B'%3EEF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=Figtree:wght@400..700&display=swap">
 <style>
-/* Layout: deep green hero band (name + "right now" panel), then About, Projects (one wide featured card over a 2x2 grid), the CV set as a paper sheet with a date gutter, and a green contact band that closes the page. */
+/* Layout: deep blue hero band (name + "right now" panel), then About, Projects (one wide featured card over a 2x2 grid), the CV set as a paper sheet with a date gutter, and a blue contact band that closes the page. */
 :root {
-  --bg: #F2F5F2;
+  --bg: #F3F5FA;
   --surface: #FFFFFF;
-  --ink: #13211C;
-  --muted: #53635C;
-  --line: #D9E1DC;
-  --accent: #0D6A52;
-  --accent-soft: #E0EFE7;
+  --ink: #111A2E;
+  --muted: #505E78;
+  --line: #D8DFEB;
+  --accent: #1F4FC9;
+  --accent-soft: #E2E9FA;
   --brass: #E3A63A;
-  --brass-ink: #1A2721;
+  --brass-ink: #121A2B;
   --brass-soft: #FAEED5;
   --brass-strong: #79520E;
-  --hero-bg: #0F3B31;
-  --hero-ink: #EEF4F0;
-  --hero-muted: #A9C4B9;
-  --hero-panel: #13483B;
-  --hero-line: rgba(238, 244, 240, 0.18);
-  --hero-hover: rgba(238, 244, 240, 0.08);
-  --shadow: 0 1px 2px rgba(19, 33, 28, 0.06), 0 14px 36px -14px rgba(19, 33, 28, 0.18);
+  --hero-bg: #14336B;
+  --hero-ink: #EEF3FB;
+  --hero-muted: #AABCDD;
+  --hero-panel: #1A3F80;
+  --hero-line: rgba(238, 243, 251, 0.18);
+  --hero-hover: rgba(238, 243, 251, 0.08);
+  --shadow: 0 1px 2px rgba(17, 26, 46, 0.06), 0 14px 36px -14px rgba(17, 26, 46, 0.18);
 
   --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --font-body: "Figtree", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -48,45 +48,45 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0B1210;
-    --surface: #111C18;
-    --ink: #E4EDE8;
-    --muted: #9AAFA6;
-    --line: #23332D;
-    --accent: #66D1A9;
-    --accent-soft: #15302A;
+    --bg: #0A0F1A;
+    --surface: #111A2B;
+    --ink: #E5EBF5;
+    --muted: #9BA8C2;
+    --line: #222D44;
+    --accent: #8AB4FF;
+    --accent-soft: #172647;
     --brass: #ECB453;
-    --brass-ink: #15201B;
+    --brass-ink: #111827;
     --brass-soft: #362B13;
     --brass-strong: #F3C878;
-    --hero-bg: #0D2A22;
-    --hero-ink: #E8F1EC;
-    --hero-muted: #9CBDB0;
-    --hero-panel: #113328;
-    --hero-line: rgba(232, 241, 236, 0.14);
-    --hero-hover: rgba(232, 241, 236, 0.07);
+    --hero-bg: #0F2350;
+    --hero-ink: #E8EEF9;
+    --hero-muted: #A3B6DA;
+    --hero-panel: #152D62;
+    --hero-line: rgba(232, 238, 249, 0.14);
+    --hero-hover: rgba(232, 238, 249, 0.07);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 14px 36px -14px rgba(0, 0, 0, 0.55);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0B1210;
-  --surface: #111C18;
-  --ink: #E4EDE8;
-  --muted: #9AAFA6;
-  --line: #23332D;
-  --accent: #66D1A9;
-  --accent-soft: #15302A;
+  --bg: #0A0F1A;
+  --surface: #111A2B;
+  --ink: #E5EBF5;
+  --muted: #9BA8C2;
+  --line: #222D44;
+  --accent: #8AB4FF;
+  --accent-soft: #172647;
   --brass: #ECB453;
-  --brass-ink: #15201B;
+  --brass-ink: #111827;
   --brass-soft: #362B13;
   --brass-strong: #F3C878;
-  --hero-bg: #0D2A22;
-  --hero-ink: #E8F1EC;
-  --hero-muted: #9CBDB0;
-  --hero-panel: #113328;
-  --hero-line: rgba(232, 241, 236, 0.14);
-  --hero-hover: rgba(232, 241, 236, 0.07);
+  --hero-bg: #0F2350;
+  --hero-ink: #E8EEF9;
+  --hero-muted: #A3B6DA;
+  --hero-panel: #152D62;
+  --hero-line: rgba(232, 238, 249, 0.14);
+  --hero-hover: rgba(232, 238, 249, 0.07);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 14px 36px -14px rgba(0, 0, 0, 0.55);
   color-scheme: dark;
 }
