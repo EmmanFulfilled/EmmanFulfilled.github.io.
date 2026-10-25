@@ -361,7 +361,7 @@ a:hover { text-decoration-thickness: 2px; }
   70%, 100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--brass) 0%, transparent); }
 }
 
-.hero__actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px; list-style: none; }
 
 /* "Right now" panel: a description list laid out as label | value rows */
 .now {
@@ -426,15 +426,19 @@ h2 {
 
 /* ---------- About ---------- */
 
+/* Heading in the left column, paragraphs stacked in the right one */
 .about {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 20px clamp(32px, 6vw, 88px);
+  gap: 18px clamp(32px, 6vw, 88px);
 }
+.about > h2 { grid-column: 1; grid-row: 1; }
+.about > p { grid-column: 2; max-width: 62ch; font-size: 1.125rem; }
 @media (max-width: 799px) {
   .about { grid-template-columns: minmax(0, 1fr); }
+  .about > h2,
+  .about > p { grid-column: 1; grid-row: auto; }
 }
-.about__body { display: grid; gap: 18px; max-width: 62ch; font-size: 1.125rem; }
 .about__aside { color: var(--muted); }
 
 /* ---------- Projects ---------- */
