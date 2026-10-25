@@ -39,16 +39,17 @@
   <main>
     <!-- Hero -->
     <section class="hero band" id="top" aria-labelledby="name">
-      <div class="hero__intro">
+      <header class="hero__intro">
+        <p class="hero__hello">Hi, I’m Manny.</p>
         <h1 class="hero__name" id="name"><span>Emmanuel</span> <span>Fulfilled</span></h1>
         <p class="hero__lead">Third-year Computing with Machine Learning and AI student at TU Dublin. I build machine learning models and backend services, and I like taking them all the way from raw data to a working app.</p>
         <p class="status"><span class="status__dot" aria-hidden="true"></span>Open to software engineering internships from January 2027</p>
-        <div class="hero__actions">
-          <a class="btn btn--brass" href="#cv">Read my CV</a>
-          <a class="btn btn--ghost" href="https://github.com/EmmanFulfilled" target="_blank" rel="noopener">GitHub&nbsp;<span class="arr" aria-hidden="true">↗</span></a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/emmanuel-fulfilled/" target="_blank" rel="noopener">LinkedIn&nbsp;<span class="arr" aria-hidden="true">↗</span></a>
-        </div>
-      </div>
+        <ul class="hero__actions">
+          <li><a class="btn btn--brass" href="#cv">Read my CV</a></li>
+          <li><a class="btn btn--ghost" href="https://github.com/EmmanFulfilled" target="_blank" rel="noopener">GitHub&nbsp;<span class="arr" aria-hidden="true">↗</span></a></li>
+          <li><a class="btn btn--ghost" href="https://www.linkedin.com/in/emmanuel-fulfilled/" target="_blank" rel="noopener">LinkedIn&nbsp;<span class="arr" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </header>
 
       <aside class="now" aria-label="What I’m up to right now">
         <p class="label now__title">Right now</p>
@@ -70,13 +71,11 @@
     <!-- About -->
     <section class="section about band" id="about" aria-labelledby="about-h">
       <h2 id="about-h">About me</h2>
-      <div class="about__body">
-        <p>I’m in third year at TU Dublin studying Computing with Machine Learning and Artificial Intelligence, and I’m currently on a 3.73/4.0 GPA (First Class Honours).</p>
-        <p>Most of my projects so far have been machine learning systems that I’ve taken from data cleaning right through to deployment. More recently I’ve been getting into backend work, building a URL shortener with JWT authentication, PostgreSQL and Redis caching.</p>
-        <p>Outside of my course I’m a Class Rep, Peer Mentor and Student Ambassador at TU Dublin, and in 2026 I received the President’s Volunteering Award. I’ve also worked part-time at Vue Cinemas since 2024, alongside full-time study.</p>
-        <p>I’m looking for a software engineering internship where I can work on real projects and keep learning from experienced engineers.</p>
-        <p class="about__aside">Away from all that, I’m into football, boxing and gaming.</p>
-      </div>
+      <p>I’m in third year at TU Dublin studying Computing with Machine Learning and Artificial Intelligence, and I’m currently on a 3.73/4.0 GPA (First Class Honours).</p>
+      <p>Most of my projects so far have been machine learning systems that I’ve taken from data cleaning right through to deployment. More recently I’ve been getting into backend work, building a URL shortener with JWT authentication, PostgreSQL and Redis caching.</p>
+      <p>Outside of my course I’m a Class Rep, Peer Mentor and Student Ambassador at TU Dublin, and in 2026 I received the President’s Volunteering Award. I’ve also worked part-time at Vue Cinemas since 2024, alongside full-time study.</p>
+      <p>I’m looking for a software engineering internship where I can work on real projects and keep learning from experienced engineers.</p>
+      <p class="about__aside">Away from all that, I’m into football, boxing and gaming.</p>
     </section>
 
     <!-- Projects -->
